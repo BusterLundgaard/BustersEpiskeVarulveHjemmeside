@@ -26,6 +26,9 @@
         var nat1 = new Audio("Nat1.mp3"); nat1.loop=true;
         var nat2 = new Audio("Nat2.mp3"); nat2.loop=true;
         var stemmemusik = new Audio("Stemmemusik.mp3");
+        
+        var rooster = new Audio("Rooster.wav");
+        var inception = new Audio("Inception.wav");
 
         var currentMusic;
 
@@ -70,12 +73,18 @@
                 if(dayOrNight) {
                     nat1.pause();
                     nat2.pause();
+                    
+                    rooster.play();
+                    
                     if(Math.random() > 0.5) {dag1.play();}
                     else {dag2.play();}  
                 }
                 else {
                     dag1.pause();
                     dag2.pause();
+                    
+                    inception.play();
+                    
                     if(Math.random() > 0.5) {nat1.play();}
                     else {nat2.play();}  
                 }
